@@ -16,3 +16,45 @@ SELECT * FROM animals WHERE neutered='t';
 SELECT * FROM animals WHERE name!='Gabumon';
 /*Find all animals with a weight between 10.4kg and 17.3kg (including the animals with the weights that equals precisely 10.4kg or 17.3kg)*/
 SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
+
+
+/* New queries */
+BEGIN;
+UPDATE animals SET species= 'unspecified';
+ROLLBACK;
+SELECT * FROM animals;
+/* */
+BEGIN;
+UPDATE animals SET species= 'digimon' where name LIKE '%mon';
+UPDATE animals SET species= 'pokemon' WHERE species IS null;
+COMMIT;
+SELECT * FROM animals;
+/* */
+BEGIN;
+DELETE FROM animals;
+SELECT * FROM animals;
+ROLLBACK;
+SELECT * FROM animals;
+/* */
+BEGIN;
+DELETE FROM animals WHERE date_of_birth > '2022-01-01';
+SAVEPOINT SP1;
+UPDATE animals SET weight_kg= weight_kg * -1;
+ROLLBACK TO SP1;
+UPDATE animals SET weight_kg= weight_kg * -1;
+COMMIT;
+
+
+/* Custom Queries */
+-- How many animals are there?
+SELECT COUNT(name) FROM animals;
+-- How many animals have never tried to escape?
+SELECT COUNT(escape_attempts) FROM animals WHERE escape_attempts=0;
+-- What is the average weight of animals?
+SELECT AVG(weight_kg) from animals;
+-- Who escapes the most, neutered or not neutered animals?
+SELECT neutered, MAX(escape_attempts) from animals GROUP BY neutered;
+-- What is the average number of escape attempts per animal type of those born between 1990 and 2000?
+SELECT species, AVG(escape_attempts) from animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31' GROUP BY species;
+-- What is the minimum and maximum weight of each type of animal?
+SELECT species, MIN(weight_kg), MAX(weight_kg) from animals GROUP BY species;

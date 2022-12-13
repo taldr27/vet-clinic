@@ -81,4 +81,8 @@ Give a ⭐️ if you like this project!
 
 I would like to thank to the code reviewers and my partners who are helping all the time.
 
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
