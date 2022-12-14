@@ -26,7 +26,9 @@ SELECT * FROM animals;
 /* */
 BEGIN;
 UPDATE animals SET species= 'digimon' where name LIKE '%mon';
+SELECT * FROM animals;
 UPDATE animals SET species= 'pokemon' WHERE species IS null;
+SELECT * FROM animals;
 COMMIT;
 SELECT * FROM animals;
 /* */
