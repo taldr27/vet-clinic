@@ -41,3 +41,44 @@ UPDATE animals SET owner_id=2  where name='Gabumon' OR name='Pikachu';
 UPDATE animals SET owner_id=3  where name='Devimon' OR name='Plantmon';
 UPDATE animals SET owner_id=4  where name='Charmander' OR name='Squirtle' OR name='Blossom';
 UPDATE animals SET owner_id=5  where name='Angemon' OR name='Boarmon';
+
+/* Project 4 */
+
+/* Data to vets table */
+
+INSERT INTO vets(name, age, date_of_graduation) VALUES ('William Tatcher', 45, 'April 23, 2000');
+INSERT INTO vets(name, age, date_of_graduation) VALUES ('Maisy Smith', 26, 'January 17, 2019');
+INSERT INTO vets(name, age, date_of_graduation) VALUES ('Stephanie Mendez', 64, 'May 04, 1981');
+INSERT INTO vets(name, age, date_of_graduation) VALUES ('Jack Harkness', 38, 'June 08, 2008');
+
+/* Data to specializations table */
+
+INSERT INTO specializations(id_vet, id_species) VALUES (1, 1);
+INSERT INTO specializations(id_vet, id_species) VALUES (3, 1);
+INSERT INTO specializations(id_vet, id_species) VALUES (3, 2);
+INSERT INTO specializations(id_vet, id_species) VALUES (4, 2);
+
+/* Data to visits table */
+
+INSERT INTO visits(id_vet, id_animals, visit_date) VALUES (1, 1, 'May 24, 2020');
+INSERT INTO visits(id_vet, id_animals, visit_date) VALUES (3, 1, 'July 22, 2020');
+INSERT INTO visits(id_vet, id_animals, visit_date) VALUES (4, 2, 'February 02, 2021');
+INSERT INTO visits(id_vet, id_animals, visit_date) VALUES (2, 3, 'January 05, 2020');
+INSERT INTO visits(id_vet, id_animals, visit_date) VALUES (2, 3, 'March 08, 2020');
+INSERT INTO visits(id_vet, id_animals, visit_date) VALUES (2, 3, 'May 14, 2020');
+
+INSERT INTO visits(id_vet, id_animals, visit_date) VALUES (3, 4, 'May 04, 2021');
+INSERT INTO visits(id_vet, id_animals, visit_date) VALUES (4, 5, 'February 24, 2021');
+INSERT INTO visits(id_vet, id_animals, visit_date) VALUES (2, 6, 'December 21, 2019');
+INSERT INTO visits(id_vet, id_animals, visit_date) VALUES (1, 6, 'August 10, 2020');
+INSERT INTO visits(id_vet, id_animals, visit_date) VALUES (2, 6, 'April 07, 2021');
+INSERT INTO visits(id_vet, id_animals, visit_date) VALUES (3, 7, 'September 29, 2019');
+
+INSERT INTO visits(id_vet, id_animals, visit_date) VALUES (4, 8, 'October 03, 2020');
+INSERT INTO visits(id_vet, id_animals, visit_date) VALUES (4, 8, 'November 04, 2020');
+INSERT INTO visits(id_vet, id_animals, visit_date) VALUES (2, 9, 'January 24, 2019');
+INSERT INTO visits(id_vet, id_animals, visit_date) VALUES (2, 9, 'May 15, 2019');
+INSERT INTO visits(id_vet, id_animals, visit_date) VALUES (2, 9, 'February 27, 2020');
+INSERT INTO visits(id_vet, id_animals, visit_date) VALUES (2, 9, 'August 03, 2020');
+INSERT INTO visits(id_vet, id_animals, visit_date) VALUES (3, 10, 'May 24, 2020');
+INSERT INTO visits(id_vet, id_animals, visit_date) VALUES (1, 10, 'January 11, 2021');
