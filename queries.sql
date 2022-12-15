@@ -185,7 +185,14 @@ LIMIT 1;
 
 /* How many visits were with a vet that did not specialize in that animal's species? */ 
 
-SELECT * FROM 
+SELECT COUNT(animals.id) FROM visits 
+INNER JOIN animals 
+  ON animals.id = visits.id_animals
+INNER JOIN vets
+  ON vets.id = visits.id_vet
+LEFT JOIN specializations
+ON specializations.id_vet = visits.id_vet
+WHERE animals.species_id != specializations.id_species AND vets.id!=3 OR specializations.id_species IS NULL;
 
 /* What specialty should Maisy Smith consider getting? Look for the species she gets the most. */ 
 
