@@ -41,3 +41,7 @@ UPDATE animals SET owner_id=2  where name='Gabumon' OR name='Pikachu';
 UPDATE animals SET owner_id=3  where name='Devimon' OR name='Plantmon';
 UPDATE animals SET owner_id=4  where name='Charmander' OR name='Squirtle' OR name='Blossom';
 UPDATE animals SET owner_id=5  where name='Angemon' OR name='Boarmon';
+
+/* Project 4 */
+
+/* Data to vets table */
