@@ -62,3 +62,10 @@ CREATE TABLE visits (
     FOREIGN KEY (id_vet) REFERENCES vets (id),
     FOREIGN KEY (id_animals) REFERENCES animals (id)
 );
+
+-- Performance audit project
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+CREATE INDEX animal_index ON visits(id_animals);
+CREATE INDEX vet_index ON visits(id_vet);
+CREATE INDEX ON owners (email);
