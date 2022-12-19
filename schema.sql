@@ -62,3 +62,8 @@ CREATE TABLE visits (
     FOREIGN KEY (id_vet) REFERENCES vets (id),
     FOREIGN KEY (id_animals) REFERENCES animals (id)
 );
+
+CREATE INDEX animal_index ON visits(id_animals);
+CREATE INDEX vet_index ON visits(id_vet);
+CREATE INDEX ON owners (email);
+
