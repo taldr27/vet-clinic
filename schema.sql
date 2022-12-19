@@ -62,4 +62,3 @@ CREATE TABLE visits (
     FOREIGN KEY (id_vet) REFERENCES vets (id),
     FOREIGN KEY (id_animals) REFERENCES animals (id)
 );
-
