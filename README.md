@@ -28,6 +28,7 @@
 # Vet-Clinic <a name="about-project"></a>
 
 **Vet-Clinic** is a project where you can find sql data about a vet clinic.
+![drawSQL-export-2022-12-20_11_09](https://user-images.githubusercontent.com/107952724/208714249-0091974d-3f5f-40e3-ba8c-ef1b01f5e459.png)
 
 ## 🛠 Built With <a name="built-with"></a>
 
